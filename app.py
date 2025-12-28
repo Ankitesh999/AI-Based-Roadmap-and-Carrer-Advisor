@@ -860,6 +860,11 @@ def render_register():
                 st.stop()
             else:
                 st.error("Email already registered.")
+    # Add Back to Login button
+    if st.button("Back to Login"):
+        set_page("Login")
+        st.session_state['page'] = "Login"
+        st.rerun()
     st.stop()
 
 def render_login():
